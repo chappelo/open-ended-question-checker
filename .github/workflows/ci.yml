@@ -20,6 +20,4 @@ jobs:
 
       - run: npm run build
 
-      - run: npm run lint
-
-      - run: npm run format:check
+      - run: npx biome ci

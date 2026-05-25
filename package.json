@@ -20,7 +20,6 @@
 		"build": "tsc",
 		"test": "node --import tsx/esm --test",
 		"format": "biome format --write",
-		"format:check": "biome format --check",
 		"lint": "biome check --write"
 	},
 	"keywords": [
