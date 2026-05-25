@@ -1,4 +1,6 @@
 export interface CheckResult {
+	question: string;
+	answer: string;
 	isValid: boolean;
 	score: number;
 	reason: string;

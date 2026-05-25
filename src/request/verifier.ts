@@ -38,10 +38,18 @@ async function checkOne(
 	client: OllamaClient,
 ): Promise<CheckResult> {
 	if (!item.answer?.trim()) {
-		return { isValid: false, score: 0, reason: "Empty answer." };
+		return {
+			question: item.question,
+			answer: item.answer,
+			isValid: false,
+			score: 0,
+			reason: "Empty answer.",
+		};
 	}
 	const response = await client.evaluate(item.question, item.answer);
 	return {
+		question: item.question,
+		answer: item.answer,
 		isValid: response.score >= resolved.threshold,
 		score: response.score,
 		reason: response.reason,
