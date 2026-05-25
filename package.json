@@ -1,0 +1,47 @@
+{
+	"name": "open-ended-question-checker",
+	"version": "0.1.0",
+	"description": "Verify open-ended survey answers with a local LLM (llama via Ollama). Detects gibberish, off-topic, and low-effort responses.",
+	"type": "module",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js"
+		}
+	},
+	"files": [
+		"dist",
+		"README.md",
+		"LICENSE"
+	],
+	"scripts": {
+		"build": "tsc",
+		"test": "node --import tsx/esm --test",
+		"format": "biome format --write",
+		"lint": "biome check --write"
+	},
+	"keywords": [
+		"survey",
+		"open-ended",
+		"oa-question",
+		"open-ended-question",
+		"open-ended-question-checker",
+		"llm",
+		"llama",
+		"ollama",
+		"answer-quality",
+		"llm-as-judge"
+	],
+	"license": "MIT",
+	"engines": {
+		"node": ">=18"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.4.15",
+		"@types/node": "^20.19.41",
+		"tsx": "^4.7.0",
+		"typescript": "^5.4.0"
+	}
+}
